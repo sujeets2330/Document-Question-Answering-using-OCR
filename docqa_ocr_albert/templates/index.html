@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Question Answering</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Question Answering System</h1>
+        <p>Upload a document (PDF, DOCX, or image) and ask a question about its content.</p>
+        
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <div class="form-group">
+                <label for="file">Document:</label>
+                <input type="file" name="file" id="file" accept=".pdf,.docx,.png,.jpg,.jpeg" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="question">Question:</label>
+                <input type="text" name="question" id="question" placeholder="What is this document about?" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Get Answer</button>
+        </form>
+
+        {% if answer %}
+        <div class="answer-section">
+            <h2>Answer:</h2>
+            <div class="answer-box">{{ answer }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
