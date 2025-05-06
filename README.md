@@ -74,13 +74,13 @@ This project merges **OCR** with **Document Question Answering (DocVQA)** to ena
 
 ### 1. Clone the Repository
  
-git clone https://github.com/yourusername/docqa-ocr.git
+git clone https://github.com/sujeets2330/Document-Question-Answering-using-OCR
 cd docqa-ocr
 
 ### 2. Create a Virtual Environment (optional but recommended)
---python -m venv venv
---source venv/bin/activate 
--- # On Windows: venv\Scripts\activate
+python -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+
 
 ### 3. Install Requirements
 pip install -r requirements.txt
@@ -89,10 +89,11 @@ pip install -r requirements.txt
 The model is downloaded automatically via Hugging Face when first used.
 
  ###  Example :
+from transformers import LayoutLMv3Processor, LayoutLMv3ForQuestionAnswering
 
---from transformers import LayoutLMv3Processor, LayoutLMv3ForQuestionAnswering
---processor = LayoutLMv3Processor.from_pretrained("microsoft/layoutlmv3-base")
---model = LayoutLMv3ForQuestionAnswering.from_pretrained("microsoft/layoutlmv3-base")
+processor = LayoutLMv3Processor.from_pretrained("microsoft/layoutlmv3-base")
+model = LayoutLMv3ForQuestionAnswering.from_pretrained("microsoft/layoutlmv3-base")
+
 
 ###  5. Run the Application
 python app.py 
