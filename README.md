@@ -55,36 +55,6 @@ This project merges **OCR** with **Document Question Answering (DocVQA)** to ena
 
 ---
 
-## 📁 Project Structure
-
-docqa-ocr/
-├── app.py # Flask server
-├── requirements.txt # All Python dependencies
-├── README.md # This file
-│
-├── inference/
-│ ├── inference.py # Handles the question-answering process
-│ └── images/ # Folder for uploaded document images
-│
-├── models/
-│ └── model_loader.py # Loads pretrained QA model and processor
-│
-├── ocr/
-│ └── ocr_extractor.py # Extracts text and layout from images
-│
-├── outputs/
-│ ├── train.log
-│ └── result.json
-│
-├── results/
-│ └── answer_output.txt
-│
-├── templates/
-│ └── index.html # Frontend form and display
-│
-├── static/
-│ ├── style.css # UI styles
-│ └── script.js # (Optional) JS interactions
 
 
 ---
@@ -103,42 +73,33 @@ docqa-ocr/
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
-
-```bash
+ 
 git clone https://github.com/yourusername/docqa-ocr.git
 cd docqa-ocr
 
-2. Create a Virtual Environment (optional but recommended)
-bash
-Copy
-Edit
+### 2. Create a Virtual Environment (optional but recommended)
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install Requirements
-bash
-Copy
-Edit
+
+### 3. Install Requirements
 pip install -r requirements.txt
-4. Download & Load Model Weights
+
+### 4. Download & Load Model Weights
 The model is downloaded automatically via Hugging Face when first used.
 
-Example (already in model_loader.py):
+ ###  Example :
 
-python
-Copy
-Edit
 from transformers import LayoutLMv3Processor, LayoutLMv3ForQuestionAnswering
 
 processor = LayoutLMv3Processor.from_pretrained("microsoft/layoutlmv3-base")
 model = LayoutLMv3ForQuestionAnswering.from_pretrained("microsoft/layoutlmv3-base")
-5. Run the Application
-bash
-Copy
-Edit
-python app.py
+
+###  5. Run the Application
+python app.py 
+
 Access the app at: http://127.0.0.1:5000
 
-🖼 Architecture Diagram
+ ###  🖼 Architecture Diagram
         [User Upload]
              ↓
     ┌──────────────────────┐
@@ -154,14 +115,16 @@ Access the app at: http://127.0.0.1:5000
     └──────────────────────┘
              ↓
        [Answer Displayed]
-📬 Contact
-👤 Your Name
+       
+### 📬 Contact
+👤 Sujeet M A
 
-🔗 GitHub: https://github.com/yourusername
+🔗 GitHub: https://github.com/sujeets2330
 
 📧 Email: sujeetmalagundi999@gmail.com
 
-🙏 Acknowledgements
+
+### 🙏 Acknowledgements
 Hugging Face Transformers
 
 Tesseract OCR
