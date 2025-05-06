@@ -79,7 +79,8 @@ cd docqa-ocr
 
 ### 2. Create a Virtual Environment (optional but recommended)
 python -m venv venv<br>
-source venv/bin/activate       # On Windows: venv\Scripts\activate
+source venv/bin/activate <br>
+# On Windows: venv\Scripts\activate
 
 
 ### 3. Install Requirements
