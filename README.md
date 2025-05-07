@@ -79,8 +79,8 @@ cd docqa-ocr
 
 ### 2. Create a Virtual Environment (optional but recommended)
 ```
-python -m venv venv<br>
-source venv/bin/activate <br>
+python -m venv venv
+source venv/bin/activate 
 # On Windows: venv\Scripts\activate
 ```
 
@@ -96,11 +96,11 @@ The model is downloaded automatically via Hugging Face when first used.
  ```
 from transformers import LayoutLMv3Processor, LayoutLMv3ForQuestionAnswering
 
-processor = LayoutLMv3Processor.from_pretrained("microsoft/layoutlmv3-base")<br>
+processor = LayoutLMv3Processor.from_pretrained("microsoft/layoutlmv3-base")
 model = LayoutLMv3ForQuestionAnswering.from_pretrained("microsoft/layoutlmv3-base")
 ```
 
-###  5. Run the Application<br>
+###  5. Run the Application
 ```
   python app.py 
 ```
